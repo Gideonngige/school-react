@@ -1,0 +1,10 @@
+.par{
+    background-color: #354649;
+    color: aliceblue;
+    height: 30px;
+    border: 2px solid #6C7A89;
+}
+.StudentDetails{
+    border: 2px solid #A3C6C4 ;
+    border-radius: 5px;
+}

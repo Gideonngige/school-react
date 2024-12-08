@@ -1,0 +1,34 @@
+.home-one{
+    margin-top: 50px;
+}
+.header{
+    font-weight: 900;
+}
+.image{
+    height: 300px;
+}
+.items{
+    background-color: #6C7A89;
+    border-radius: 5px;
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container1 .inner-container{
+    background-color: #6C7A89;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    
+}
+.container1 .inner-container input[type='submit']{
+    width: 100%;
+}
+.container1 .inner-container h2{
+    text-align: center;
+}
