@@ -5,9 +5,34 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     
-    const handleSubmit = () => {
+    const handleSubmit = async() => {
         console.log(email);
         console.log(password);
+        try{
+            // Simulate login API call
+            const response = await fetch('http://127.0.0.1:8000/handle_login/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email,
+                    password
+                })
+            });
+            if(response.ok){
+                const result = await response.json();
+                console.log('Logged in successfully:', result);
+            }
+            else{
+                console.error('Failed to login:', response.statusText);
+                alert('Failed to login'); // Display an error message
+            }
+        }
+        catch(error){
+            console.error('Error:', error);
+            alert('Failed to login'); // Display an error message
+        }
 
     };
     return (
